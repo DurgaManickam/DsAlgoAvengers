@@ -1,0 +1,71 @@
+package stepdefinition;
+import org.openqa.selenium.WebDriver;
+import driverFactory.DriverManager;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import Webpages.login_page;
+public class login_step {
+	private WebDriver drivers;
+	 private login_page login;
+
+
+	@Given("User enters a set of valid and invalid data for username and password")
+	public void user_enters_a_set_of_valid_and_invalid_data_for_username_and_password() {
+	    // Write code here that turns the phrase above into concrete actions
+		
+		WebDriver driver = DriverManager.getDriver();
+		System.out.println("I am inside Login SD file");
+		 
+		login = new login_page(driver);
+			driver.get("https://dsportalapp.herokuapp.com/");
+			System.out.println("Current title of the page : " + driver.getTitle());
+			System.out.println("Current URL of the page : " + driver.getCurrentUrl());
+		 
+
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User navigates to Signin Page")
+	public void user_navigates_to_signin_page() {
+	   //login=new login_page(driver);
+		login.Signin_Page();
+	   
+	}
+	     // Write code here that turns the phrase above into concrete actions
+	     
+	@When("^user enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_and_in_the_signnpage(String Uname, String passwrd) {
+
+	    // Write code here that turns the phrase above into concrete actions
+		try {
+			login.loginValidUser( Uname,  passwrd);
+		}  catch (Throwable e) {
+			
+			e.printStackTrace();
+			System.out.println("Error  "+e.getMessage());
+		}
+	}
+		@When("click on Login button")
+		public void click_on_login_button() {
+		    // Write code here that turns the phrase above into concrete actions
+		login.clickLogin();    
+			throw new io.cucumber.java.PendingException();
+		}
+
+		@Then("User must navigate to Home Page with the message {string} and with the user name on the top")
+		public void user_must_navigate_to_home_page() throws InterruptedException {
+		
+			try{
+				login.MyHomepage();
+				Thread.sleep(1000);}
+				catch(Exception e) {
+			System.out.println("Invalid Username and Password please try again"+e.getMessage());
+		    throw new io.cucumber.java.PendingException();
+			
+	}	
+		
+	}
+			
+}
