@@ -1,0 +1,102 @@
+package Webpages;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import driverFactory.DriverManager;
+
+public class login_page {
+	private WebDriver driver;
+	// Locating the files with By Locator
+	private By username = By.id("id_username");
+	private By startbutton = By.xpath("///html[1]");
+	private By password = By.id("id_password");
+	private By SignInBtn = By.xpath("/html[1]/body[1]/div[1]/nav[1]/div[1]/div[2]/ul[1]/a[3]");
+	
+	private By Signinlink = By.xpath("//a[@href='/login']");
+	private By message = By.xpath("//div[@class='alert alert-primary']");
+	private By loggedin_userid = By.xpath("//div[@class='navbar-nav']//ul//a[2]");
+	String username_entered;
+	private By errormessage_login=By.xpath("//div[@class='alert alert-primary']");
+
+
+public login_page(WebDriver driver) {
+
+	this.driver = driver;
+}
+
+public void clickLogin() {
+
+	driver.findElement(SignInBtn).click();
+	System.out.println("logged in successfully");
+}
+public void MyHomepage() {
+
+	String CorrectMsg = "You are Successfully logged in";
+	String msg = driver.findElement(message).getText();
+	System.out.println("the value of message    :" + msg);
+	Assert.assertEquals(CorrectMsg, msg);
+
+	String current_user = driver.findElement(loggedin_userid).getText();
+
+	System.out.println("the value of logged in user details    " + current_user);
+
+	System.out.println("The value of Login userid send through input  " + username_entered);
+
+	Assert.assertEquals(current_user.toLowerCase(), username_entered.toLowerCase());
+	System.out.println("The value of Login userid through input + value at top right corner of logged in page  "
+			+ username_entered + current_user);
+	System.out.println("Successfully Logged in to DsAlgo Home Page");
+
+}
+public void Getstarted() {
+
+	System.out.println("inside getstarted code");
+	driver.findElement(startbutton).isDisplayed();
+	driver.findElement(startbutton).click();
+
+	System.out.println("Am inside Getstarted and clicking the signin link");
+
+}
+
+public void Signin_Page() {
+	System.out.println("Am inside signin page link code");
+	driver.findElement(Signinlink).click();
+	System.out.println("Clicked Signin link and landed on Login home page");
+
+}
+
+public void loginValidUser(String uname, String passwrd) throws Throwable {
+	//| numpyninja@123 | Qwerty@123 |
+	System.out.println("Am inside the ogin page with correct credentials");
+	username_entered = uname;
+	driver.findElement(username).sendKeys(uname); 
+	System.out.println("entered username successfully");
+     driver.findElement(password).sendKeys(passwrd);
+ 	Thread.sleep(1000);
+
+	System.out.println("entered password successfully");
+	
+if(!(uname.equalsIgnoreCase("numpyninja@123") && passwrd.equalsIgnoreCase("Qwerty@123"))) {
+		
+		String Err_message=driver.findElement(errormessage_login).getText();//error message :Invalid Username and Password
+     	assertTrue(Err_message.contains("Invalid username"));
+	    System.out.println(Err_message);
+         DriverManager.quitDriver();
+          }
+		if(uname.equals("")) {
+			System.out.println("Enter any value blank is not allowed"+uname);//modify code
+			 DriverManager.quitDriver();
+		}
+		if(passwrd.equals("is blank")){
+			System.out.println("Enter any value blank is not allowed"+passwrd);//modify code
+			 DriverManager.quitDriver();
+		
+}else
+{
+	System.out.println("Login credentials muct be completed");
+	}}
+
+}
