@@ -1,0 +1,18 @@
+
+@tag
+Feature: Create a login page 
+  I want to use this template for my feature file
+  Given User must launch a browser and navigate to the DSAlgo website
+   When User clicks on Get started button
+    Then User navigates to Signin Page
+  
+  //For the webpage https://dsportalapp.herokuapp.com/home
+@runBoth
+
+  @tag1
+  Scenario: Try to login the page by using valid and invalid data
+    Given User enters a set of valid and invalid data for username and password
+    
+    When user enters "username " and "password" in the signnpage
+     And click on Login button
+    Then User must navigate to Home Page with the message "Login successful" and with the user name on the top
