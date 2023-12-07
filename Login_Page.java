@@ -1,26 +1,32 @@
 package webPages;
 
-import static org.junit.Assert.assertTrue;
+import java.util.NoSuchElementException;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import driverFactory.DriverManager;
+import org.openqa.selenium.WebElement;
 
 public class Login_Page {
 
 	private WebDriver driver;
 	// 1.By Locators :
 	private By username = By.id("id_username");
+
 	private By startbutton = By.xpath("//a[@href='/home']/button[@class='btn']");
 	private By password = By.id("id_password");
 	private By SignInBtn = By.xpath("//input[@type='submit']");
 	private By Signinlink = By.xpath("//a[@href='/login']");
-	private By message = By.xpath("//div[@class='alert alert-primary']");
+
 	private By loggedin_userid = By.xpath("//div[@class='navbar-nav']//ul//a[2]");
 	String username_entered;
-	private By errormessage_login=By.xpath("//div[@class='alert alert-primary']");
+
+	private By message_login = By.xpath("//div[contains(@class,'alert-primary')]");
+
+	private static final String ERR_MSG_INVALID_CREDENTIALS = "Invalid Username and Password";
+	private static final String REAL_LOGINID = "numpyninja@123";
+	private static final String REAL_PASSWORD = "Qwerty@123";
+	private static final String HOMEPAPAGEEXPECTED_URL = "https://dsportalapp.herokuapp.com/home";
+	private static final String EXPECTEDMSG = "You are logged in";
 
 	// 2.constructor
 	public Login_Page(WebDriver driver) {
@@ -31,73 +37,88 @@ public class Login_Page {
 	public void clickLogin() {
 
 		driver.findElement(SignInBtn).click();
-		System.out.println("logged in successfully");
+
 	}
 
-	public void IsItHomepage() {
+	public void LoginValidate(String userid, String UserPassword) {
 
-		String ExpectedMSg = "You are logged in";
-		String msg = driver.findElement(message).getText();
-		System.out.println("the value of message    :" + msg);
-		Assert.assertEquals(ExpectedMSg, msg);
+		if (userid.isBlank() && !(UserPassword.isBlank())) {
+			loginValidationError();
+		}
 
-		String logged_user = driver.findElement(loggedin_userid).getText();
+		else if (UserPassword.isBlank() && !(userid.isBlank())) {
+			loginValidationError();
+		} else if (UserPassword.isBlank() && (userid.isBlank())) {
 
-		System.out.println("the value of logged in user details    " + logged_user);
+			loginValidationError();
+		}
 
-		System.out.println("The value of Login userid send through input  " + username_entered);
+		else if (!(userid.isBlank() && UserPassword.isBlank())) {
+			if (!((userid.equalsIgnoreCase(REAL_LOGINID)) && UserPassword.equalsIgnoreCase(REAL_PASSWORD))) {
+				String err_message = getErrorMessage(message_login);
+				
+				if (err_message.equalsIgnoreCase(ERR_MSG_INVALID_CREDENTIALS)) {
+					System.out.println("username and password input is invalid :" + err_message);
+				}
+			}
 
-		Assert.assertEquals(logged_user.toLowerCase(), username_entered.toLowerCase());
-		System.out.println("The value of Login userid through input + value at top right corner of logged in page  "
-				+ username_entered + logged_user);
-		System.out.println("Successful Login to Home Page");
+			else {
+				System.out.println("signin button is clicked successfully and needs validation.");
+			}
+		}
+	}
+
+	private String getErrorMessage(By messageLocator) {
+		try {
+			WebElement msg_text = driver.findElement(messageLocator);
+			return msg_text.getText();
+		} catch (NoSuchElementException e) {
+			
+			return "Error message element not found";
+		}
+	}
+
+	public void loginValidationError() {
+		WebElement activeElement = driver.switchTo().activeElement();
+		String errormsg = activeElement.getAttribute("validationMessage");// Please fill out this field
+		System.out.println("Actual message appeared on screen  : " + errormsg);
+
+	}
+
+	public void IsItHomepage(String uname) {
+
+		String homepage_url = driver.getCurrentUrl();
+		if (HOMEPAPAGEEXPECTED_URL.equalsIgnoreCase(homepage_url)) {
+			
+			String msg = getErrorMessage(message_login); 
+			String logged_user = getErrorMessage(loggedin_userid);
+			
+			if (EXPECTEDMSG.equalsIgnoreCase(msg) && logged_user.equalsIgnoreCase(uname)) {
+				System.out.println("Successful Login to Home Page");
+			}
+		} else {
+
+			System.out.println("FAIL: You are not logged in.Current URL is :" + driver.getCurrentUrl());
+		}
 
 	}
 
 	public void Getstarted() {
 
-		System.out.println("inside getstarted code");
 		driver.findElement(startbutton).isDisplayed();
 		driver.findElement(startbutton).click();
-
-		System.out.println("Am inside Getstarted and clicking the signin link");
-
 	}
 
 	public void Signin_Page() {
-		System.out.println("Am inside signin page link code");
 		driver.findElement(Signinlink).click();
-		System.out.println("Clicked Signin link and landed on Login home page");
 
 	}
 
 	public void loginValidUser(String uname, String passwrd) throws Throwable {
-		//| numpyninja@123 | Qwerty@123 |
-		System.out.println("Am inside the valid user section");
-		username_entered = uname;
-		driver.findElement(username).sendKeys(uname); 
-		System.out.println("entered username successfully");
-         driver.findElement(password).sendKeys(passwrd);
-     	Thread.sleep(1000);
 
-		System.out.println("entered password successfully");
-		
-if(!(uname.equalsIgnoreCase("numpyninja@123") && passwrd.equalsIgnoreCase("Qwerty@123"))) {
-			
-			String Err_message=driver.findElement(errormessage_login).getText();//error message :Invalid Username and Password
-	     	assertTrue(Err_message.contains("Invalid username"));
-		    System.out.println(Err_message);
-	         DriverManager.quitDriver();
-	          }
-			if(uname.equals("")) {
-				System.out.println("blank username entered.Enter valid value"+uname);//modify code
-				 DriverManager.quitDriver();
-			}
-			if(passwrd.equals("")){
-				System.out.println("blank password entered.Enter valid value"+passwrd);//modify code
-				 DriverManager.quitDriver();
-			}
-	}
+		driver.findElement(username).sendKeys(uname);
+		driver.findElement(password).sendKeys(passwrd);
 
 	}
 
+}
