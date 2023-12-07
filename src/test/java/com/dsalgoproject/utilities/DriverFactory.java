@@ -1,4 +1,4 @@
-package com.dsalgo.utilities;
+package com.dsalgoproject.utilities;
 
 import java.time.Duration;
 
@@ -9,13 +9,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverFactory {
 	private static WebDriver driver;
+	private static ConfigurationReader configReader = new ConfigurationReader(AppConstants.CONFIG_PROPERTIES_FILE_NAME);
 
 	public static WebDriver initializeDriver() {
 		if (driver == null) {
 			ChromeOptions options = browserCapablities();
 			driver = new ChromeDriver(options);
+			
+			//driver = new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(configReader.getImplicitWaitTimeout()));
 			return driver;
 		} else {
 			return driver;
@@ -33,7 +36,7 @@ public class DriverFactory {
 		options.setScriptTimeout(Duration.ofSeconds(30));// google is not responding dialog
 		options.setPageLoadTimeout(Duration.ofMillis(30000));// eg 404 error , wait till page loads after specified time
 																// timeout exception
-		options.setImplicitWaitTimeout(Duration.ofSeconds(30));// waiting for element
+		options.setImplicitWaitTimeout(Duration.ofSeconds(configReader.getImplicitWaitTimeout()));// waiting for element
 		options.addArguments("start-maximized"); // to open in maximum mode
 		options.addArguments("--incognito");// open in incognito mode
 		return options;

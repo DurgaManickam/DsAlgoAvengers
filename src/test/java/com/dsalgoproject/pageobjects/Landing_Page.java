@@ -1,11 +1,11 @@
-package com.dsalgo.pageobjects;
+package com.dsalgoproject.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.dsalgo.utilities.Events;
+import com.dsalgoproject.utilities.Events;
 
 /**
  * Dsalgo portal page - Landing Page

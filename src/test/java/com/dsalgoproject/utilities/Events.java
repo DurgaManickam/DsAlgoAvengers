@@ -1,4 +1,4 @@
-package com.dsalgo.utilities;
+package com.dsalgoproject.utilities;
 
 import org.openqa.selenium.WebElement;
 

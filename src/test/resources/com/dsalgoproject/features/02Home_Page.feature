@@ -37,6 +37,7 @@ Given The user is on the Home Page
       | Tree       |
       | Graph      |
      
+  @home @register
   Scenario: Clicking on "Register" redirects to Register form
     When The user clicks "Register"
     Then The user should be redirected to Register form

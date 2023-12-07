@@ -1,11 +1,12 @@
-package com.dsalgo.stepdefinitions;
+package com.dsalgoproject.stepdefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import com.dsalgo.pageobjects.Home_Page;
-import com.dsalgo.utilities.DriverFactory;
+import com.dsalgoproject.pageobjects.Home_Page;
+import com.dsalgoproject.utilities.AppConstants;
+import com.dsalgoproject.utilities.DriverFactory;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,19 +21,19 @@ public class Home_Steps {
 	public void the_user_opens_home_page() {
 		// if(!driver.getCurrentUrl().equalsIgnoreCase("https://dsportalapp.herokuapp.com/home"))
 		// {
-		driver.get("https://dsportalapp.herokuapp.com/home");
+		driver.get(AppConstants.HOME_PAGE_URL);
 		// }
-		Assert.assertEquals(driver.getCurrentUrl(), "https://dsportalapp.herokuapp.com/home");
+		Assert.assertEquals(driver.getCurrentUrl(), AppConstants.HOME_PAGE_URL);
 	}
 
 	@When("The user is in home page")
 	public void the_user_is_in_home_page() {
-		Assert.assertEquals(driver.getCurrentUrl(), "https://dsportalapp.herokuapp.com/home");
+		Assert.assertEquals(driver.getCurrentUrl(), AppConstants.HOME_PAGE_URL);
 	}
 
 	@Then("The user should see {int} panes with different data structures")
-	public void the_user_should_see_panes_with_different_data_structures(Integer int1) {
-		Assert.assertEquals(homePage.getTotalPanes(), int1);
+	public void the_user_should_see_panes_with_different_data_structures(Integer totalPanes) {
+		Assert.assertEquals(homePage.getTotalPanes(), totalPanes);
 	}
 
 	@When("The user clicks {string} drop down")

@@ -1,4 +1,4 @@
-package com.dsalgo.pageobjects;
+package com.dsalgoproject.pageobjects;
 
 import java.util.List;
 
@@ -8,8 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.dsalgo.utilities.Events;
-
+import com.dsalgoproject.utilities.Events;
 
 public class Home_Page {
 
@@ -49,27 +48,31 @@ public class Home_Page {
 	public void click_numpyNinja() {
 		Events.click(numpyNinja, "NumpyNinja");
 	}
+
 	public void click_dropDown() {
 		Events.click(dataStructuresDropDown, "Data Structures");
 	}
-	
+
 	public void click_register() {
 		Events.click(register, "Register");
 	}
-	
+
 	public void click_signin() {
 		Events.click(signin, "Sign in");
 	}
-	
+
 	public int getTotalDropdownOptions() {
 		return dropDownOptions.size();
 	}
+
 	public int getTotalPanes() {
 		return panes.size();
 	}
+
 	public String getMessage() {
 		return errorMessage.getText();
 	}
+
 	public void getDropDownSelectedOption(String selectedOption) {
 		System.out.println(selectedOption);
 		switch (selectedOption) {
@@ -95,12 +98,13 @@ public class Home_Page {
 			break;
 		}
 	}
-	
-	public void getPaneSelectedOption(WebDriver driver,String selectedOption, String buttonText) {
-		WebElement getStarted = driver.findElement(By.xpath("//*[@class = 'card-title' and text() ='"+selectedOption+"']/following-sibling::a[text()='"+buttonText+"']"));
+
+	public void getPaneSelectedOption(WebDriver driver, String selectedOption, String buttonText) {
+		WebElement getStarted = driver.findElement(By.xpath("//*[@class = 'card-title' and text() ='" + selectedOption
+				+ "']/following-sibling::a[text()='" + buttonText + "']"));
 		Events.click(getStarted, selectedOption);
 	}
-	
+
 	public void getRegisterOrSignIn(String string) {
 		switch (string) {
 		case "Register":
