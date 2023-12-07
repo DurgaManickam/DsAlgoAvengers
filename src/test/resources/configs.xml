@@ -14,7 +14,7 @@
     <documentTitle>DSAlgoAvengers</documentTitle>
     
     <!-- report name - displayed at top-nav -->
-    <reportName>DSAlgoAvengers - Cucumber Report</reportName>
+    <reportName>DSAlgoAvengers - Cucumber Extent Report</reportName>
     
     <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
     <dateFormat>yyyy-MM-dd</dateFormat>
