@@ -191,19 +191,19 @@ public class Arrays_Steps {
 	public void click_run() {
 		array_Page.clickRun();
 	}
+	
+	@Then("Validate the runoutput")
+	public void validate_the_runoutput() {
+		Assert.assertEquals(array_Page.get_run_output(), runOutput);
+	}
 
 	@When("clickSubmit button")
 	public void click_submit() {
 		array_Page.clickSubmit();
 	}
 
-	@Then("Validate the runoutput")
-	public void validate_the_runoutput() {
-		Assert.assertEquals(array_Page.get_output(), runOutput);
-	}
-
 	@Then("Validate the submitoutput")
 	public void validate_the_submitoutput() {
-		Assert.assertEquals(array_Page.get_output(), submitOutput);
+		Assert.assertEquals(array_Page.get_submit_output(), submitOutput);
 	}
 }

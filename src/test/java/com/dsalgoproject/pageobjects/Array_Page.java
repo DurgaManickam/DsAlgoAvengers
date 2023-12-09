@@ -47,6 +47,9 @@ public class Array_Page {
 	WebElement output;
 	@FindBy(xpath = "//*[@id=\"answer_form\"]/div/div/div/textarea")
 	WebElement code_editor;
+	
+	private String runResult;
+	private String submitResult;
 
 	public Array_Page(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -108,6 +111,7 @@ public class Array_Page {
 	public void clickRun() {
 		try {
 			runButton.click();
+			runResult = output.getText();
 		} catch (Exception e) {
 			LoggerLoad.info("Submit array page " + e.getLocalizedMessage());
 		}
@@ -116,18 +120,32 @@ public class Array_Page {
 	public void clickSubmit() {
 		try {
 			submitButton.click();
+			submitResult = output.getText();
 		} catch (Exception e) {
 			LoggerLoad.info("Submit array page " + e.getLocalizedMessage());
 		}
 	}
 
-	public String get_output() {
+	public String get_run_output() {
 		try {
-			return output.getText();
+			return runResult;
 		} catch (Exception e) {
 			LoggerLoad.info("Submit array page " + e.getLocalizedMessage());
 		}
 		return null;
+	}
+	public String get_submit_output() {
+		try {
+			return submitResult;
+		} catch (Exception e) {
+			LoggerLoad.info("Submit array page " + e.getLocalizedMessage());
+		}
+		return null;
+	}
+	
+
+	public String get_output() {
+		return output.getText();
 	}
 
 	public String invalidate_run(WebDriver driver) {
@@ -203,5 +221,6 @@ public class Array_Page {
 			}
 		}
 	}
+
 
 }

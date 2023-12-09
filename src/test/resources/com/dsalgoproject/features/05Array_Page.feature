@@ -83,7 +83,7 @@ Feature: Arrays Page
       | Search the array                        | 0 |
       #| Search the array                        | 1 |
       #| Max Consecutive Ones                    | 2 |
-      #| Max Consecutive Ones                    | 3 |
+      | Max Consecutive Ones                    | 3 |
       #| Find Numbers with Even Number of Digits | 4 |
       #| Find Numbers with Even Number of Digits | 5 |
       #| Squares of a  Sorted Array              | 6 |
