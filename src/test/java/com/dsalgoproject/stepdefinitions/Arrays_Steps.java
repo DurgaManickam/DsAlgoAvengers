@@ -107,6 +107,13 @@ public class Arrays_Steps {
 		String expectedOutput = array_Page.get_output();
 		Assert.assertEquals(actualOutput, expectedOutput);
 	}
+	
+	@When("The user passes invalid {string} to textarea and click Run button")
+	public void input_invalid_to_editor(String questionString) {
+		array_Page.inputQuestion(questionString, driver);
+		array_Page.clickRun();
+	}
+	
 
 	@Then("Validate the alert box {string}")
 	public void invalid_text_alert_message(String actualOutput) {
@@ -189,7 +196,7 @@ public class Arrays_Steps {
 
 	@When("clickRun button")
 	public void click_run() {
-		array_Page.clickRun();
+		array_Page.clickRunInPractice();
 	}
 	
 	@Then("Validate the runoutput")
@@ -199,7 +206,7 @@ public class Arrays_Steps {
 
 	@When("clickSubmit button")
 	public void click_submit() {
-		array_Page.clickSubmit();
+		array_Page.clickSubmitInPractice();
 	}
 
 	@Then("Validate the submitoutput")

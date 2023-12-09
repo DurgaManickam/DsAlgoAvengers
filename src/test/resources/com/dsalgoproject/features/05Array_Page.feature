@@ -44,7 +44,7 @@ Feature: Arrays Page
    @array4
   Scenario Outline: Passing different invalid input to TryEditor and clicking on Run button should display a alert
     Given The user is in the TryEditor page
-    When The user passes "<inputString>" to textarea and click Run button
+    When The user passes invalid "<inputString>" to textarea and click Run button
     Then Validate the alert box "<expectedOutputString>"  
       
     Examples:

@@ -1,6 +1,7 @@
 package com.dsalgoproject.pageobjects;
 
 import java.time.Duration;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -104,23 +105,29 @@ public class Array_Page {
 		// NEED TO CHECK
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement test = wait.until(ExpectedConditions.visibilityOf(questionInput));
-		test.click();
 		new Actions(driver).sendKeys(test, question).perform();
 	}
-
+	
 	public void clickRun() {
+		runButton.click();
+	}
+
+	public void clickRunInPractice() {
 		try {
 			runButton.click();
 			runResult = output.getText();
+			LoggerLoad.info("RUNN RESULT: "+runResult);
 		} catch (Exception e) {
 			LoggerLoad.info("Submit array page " + e.getLocalizedMessage());
 		}
 	}
 
-	public void clickSubmit() {
+	public void clickSubmitInPractice() {
 		try {
 			submitButton.click();
+			LoggerLoad.info("CLICKED SUBMIT: "+submitResult);
 			submitResult = output.getText();
+			LoggerLoad.info("SUBMIT RESULT: "+submitResult);
 		} catch (Exception e) {
 			LoggerLoad.info("Submit array page " + e.getLocalizedMessage());
 		}
@@ -128,6 +135,7 @@ public class Array_Page {
 
 	public String get_run_output() {
 		try {
+			LoggerLoad.info("RUNN RESULT: "+runResult);
 			return runResult;
 		} catch (Exception e) {
 			LoggerLoad.info("Submit array page " + e.getLocalizedMessage());
@@ -221,6 +229,8 @@ public class Array_Page {
 			}
 		}
 	}
+
+	
 
 
 }
