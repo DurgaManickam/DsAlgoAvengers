@@ -12,10 +12,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Landing_Steps {
-	
-	private WebDriver driver = DriverFactory.initializeDriver();
-    private Landing_Page landingPage = new Landing_Page(driver);
-	
+
+	private WebDriver driver = DriverFactory.getDriver();
+	private Landing_Page landingPage = new Landing_Page(driver);
+
 	@Given("The user opens DS Algo portal link")
 	public void the_user_opens_ds_algo_portal_link() {
 		driver.get(AppConstants.LANDING_PAGE_URL);
@@ -23,7 +23,7 @@ public class Landing_Steps {
 
 	@When("The user clicks the {string} button")
 	public void the_user_clicks_the_button(String string) {
-	    landingPage.click_get_started();
+		landingPage.click_get_started();
 	}
 
 	@Then("The user should land in DS Algo portal page")

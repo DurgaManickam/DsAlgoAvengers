@@ -9,14 +9,15 @@ import org.testng.annotations.Parameters;
 
 import com.dsalgoproject.hooks.Hooks;
 
-// Runner file to Test Cross Browser Testing - used in testng.xml
+// Test Runner file to test all the features in Chrome Browser - - used in testngAllTests.xml
 @CucumberOptions(features = "src/test/resources/com/dsalgoproject/features", glue = {
 		"com.dsalgoproject.stepdefinitions", "com.dsalgoproject.hooks" }, plugin = { "pretty",
-				"html:target/crossBrowserCucumberReports/cbCucumberReport.html",
-				"json:target/crossBrowserCucumberReports/cbCucumberReportJson.json",
-				"junit:target/crossBrowserCucumberReports/cbCucumberReportXml.xml",
-				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" }, tags = "@landing or @graph", monochrome = true)
-public class TestRunner extends AbstractTestNGCucumberTests {
+				"html:target/allTestsCucumberReports/allTestCucumberReport.html",
+				"json:target/allTestsCucumberReports/allTestCucumberReportJson.json",
+				"junit:target/allTestsCucumberReports/allTestCucumberReportXml.xml",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" }, tags = "not @signout", monochrome = true)
+public class TestRunnerAllTests extends AbstractTestNGCucumberTests {
 
 	@Override
 	@DataProvider(parallel = false)

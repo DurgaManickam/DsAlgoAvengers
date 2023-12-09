@@ -2,15 +2,14 @@
 Feature: Home Page
 Background:
 Given The user is on the Home Page
-
   Scenario: Check the number of options listed in the home page
     When The user is in home page
     Then The user should see 7 panes with different data structures
-    
+   
   Scenario: Clicking on Data Structures drop down should display 6 options
     When The user clicks "Data Structures" drop down
     Then The user should see 6 different data structure entries in that dropdown
-    
+  
   Scenario Outline: User is in home page, selecting the dropdown "<option>" without sign in displays the error message
     When The user selects "<option>" data structures from the drop down without Sign in.
     Then It should alert the user with a message "You are not logged in" 

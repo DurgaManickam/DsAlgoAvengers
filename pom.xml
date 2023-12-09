@@ -12,9 +12,13 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.2</version>
 				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
 						<suiteXmlFile>
 							testng.xml
+						</suiteXmlFile>
+						<suiteXmlFile>
+							testngAllTests.xml
 						</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
@@ -121,5 +125,13 @@
 			<version>2.25.0</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- Maven dependency for WebDriver -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.4.3</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 </project>

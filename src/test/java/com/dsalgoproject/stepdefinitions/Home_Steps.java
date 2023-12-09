@@ -14,7 +14,7 @@ import io.cucumber.java.en.When;
 
 public class Home_Steps {
 
-	private WebDriver driver = DriverFactory.initializeDriver();
+	private WebDriver driver = DriverFactory.getDriver();
 	private Home_Page homePage = new Home_Page(driver);
 
 	@Given("The user is on the Home Page")

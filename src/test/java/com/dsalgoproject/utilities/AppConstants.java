@@ -20,10 +20,14 @@ public final class AppConstants {
 	public static final String ARRAY_PAGE_PRACTICE = ARRAY_PAGE_URL + "practice";
 	public static final String TRY_EDITOR_URL = LANDING_PAGE_URL + "tryEditor";
 	// Test data files
-	public static final String TEST_DATA_EXCEL_PATH = CURRENT_DIRECTORY + "/src/test/resources/com/dsalgoproject/testData/dsAlgoTestData.xlsx";
+	public static final String TEST_DATA_EXCEL_PATH = CURRENT_DIRECTORY
+			+ "/src/test/resources/com/dsalgoproject/testData/dsAlgoTestData.xlsx";
 	public static final String REGISTER_VALID_USER_TEST_SHEET = "registerValidUserSheet";
 	public static final String REGISTER_INVALID_USER_TEST_SHEET = "registerInvalidUserSheet";
 	public static final String ARRAY_PRACTICE_QUES_ANSWER_SHEET = "practiceQuestionSheet";
-	public static final String CONFIG_PROPERTIES_FILE_NAME = CURRENT_DIRECTORY + "/src/test/resources/com/dsalgoproject/testData/configData.properties";
-    
+	public static final String CONFIG_PROPERTIES_FILE_NAME = CURRENT_DIRECTORY
+			+ "/src/test/resources/com/dsalgoproject/testData/configData.properties";
+	public static final String username = "numpyninja@123";
+	public static final String password = "Qwerty@123";
+
 }
