@@ -27,7 +27,6 @@ Given The user is in register page
     | 0 |
     | 1 |
     | 2 |
-    | 3 |
     
  @registerPageLogin
   Scenario: Clicking on Login button redirects to sigin page

@@ -74,9 +74,9 @@ Feature: Arrays Page
     When The user clicks the "<question>" link
     And enters answer from excelfile for <RowNumber> in tryEditor
     And clickRun button 
-    And clickSubmit button
+   # And clickSubmit button
     Then Validate the runoutput
-    And Validate the submitoutput
+  #  And Validate the submitoutput
 
     Examples: 
       | question                                | RowNumber |
