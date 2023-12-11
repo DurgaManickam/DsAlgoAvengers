@@ -1,0 +1,81 @@
+[INFO ]2023-12-0600:36:10.928[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:36:10.934[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0600:36:13.458[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:36:13.460[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0600:36:16.124[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:36:16.127[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0600:36:18.904[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:36:18.908[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0600:36:57.280[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:36:57.285[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0600:36:59.898[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:36:59.904[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0600:37:02.590[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:37:02.590[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0600:37:05.242[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0600:37:05.243[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0609:57:10.504[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0609:57:27.031[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0609:57:27.039[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0609:57:29.553[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0609:57:29.555[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0609:57:31.924[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0609:57:31.927[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0609:57:34.356[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0609:57:34.357[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0615:55:30.660[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:55:30.672[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0615:55:33.344[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:55:33.352[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0615:55:36.131[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:55:36.134[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0615:55:38.805[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:55:38.807[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0615:56:36.391[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:56:36.393[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0615:56:39.009[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:56:39.010[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0615:56:41.727[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:56:41.727[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0615:56:44.527[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0615:56:44.527[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0621:37:54.642[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0621:37:54.646[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0621:37:57.127[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0621:37:57.128[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0621:37:59.599[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0621:37:59.600[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0621:38:02.072[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0621:38:02.073[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0622:02:45.208[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:02:45.214[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:02:47.725[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:02:47.729[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:02:50.185[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:02:50.189[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0622:02:52.703[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:02:52.705[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0622:05:00.411[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:05:00.417[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:05:02.979[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:05:02.983[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:05:05.406[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:05:05.410[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0622:05:07.879[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:05:07.880[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0622:17:58.320[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:17:58.325[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:18:00.885[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:18:00.887[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:18:03.309[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:18:03.311[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0622:18:05.771[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:18:05.773[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
+[INFO ]2023-12-0622:21:32.143[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:21:32.146[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:21:34.611[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:21:34.613[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Invalid Username
+[INFO ]2023-12-0622:21:37.039[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:21:37.042[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:password_mismatch:The two password fields didn’t match.
+[INFO ]2023-12-0622:21:39.481[main]com.dsalgoproject.utilities.LoggerLoad1)-Clicked Register button
+[INFO ]2023-12-0622:21:39.482[main]com.dsalgoproject.utilities.LoggerLoad1)-Invalid registered user and expected message:Username already exists
