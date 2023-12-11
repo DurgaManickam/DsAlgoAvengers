@@ -171,26 +171,9 @@ public class Array_Page {
 		WebDriverWait mywait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement test2 = mywait.until(ExpectedConditions.presenceOfElementLocated(textareaLocator));
 
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//		WebElement test2 = wait.until(ExpectedConditions.visibilityOf(code_editor));
-
-		// Click on the code editor
-//		test2.click();
-		// test2.sendKeys("HElloo");
-//		test2.clear();
-
 		// Use Actions class to clear the contents and send new keys
 		new Actions(driver).keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
 		System.out.println(answer);
-
-		// new Actions(driver).sendKeys(test2, answer).perform();
-
-		// use code_editor div
-		// String escapedAnswer = answer.replace("'", "\\'").replace("\n", "\\n");
-//
-		// JavascriptExecutor jse = (JavascriptExecutor) driver;
-		// jse.executeScript("arguments[0].innerHTML='" + escapedAnswer + "';", test2);
-		// // Taking as single line
 
 		// split the python code into separate lines and send the codes line by line
 		String[] str1 = answer.split("\n");

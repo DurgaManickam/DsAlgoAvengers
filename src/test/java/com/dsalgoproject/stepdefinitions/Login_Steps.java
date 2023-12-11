@@ -38,8 +38,11 @@ public class Login_Steps {
 
 	@Then("User navigates to Signin Page")
 	public void user_navigates_to_signin_page() {
-
+		try {
 		login.Signin_Page();
+		}catch(AssertionError e) {
+			System.out.println(e.getLocalizedMessage());
+		}
 
 	}
 

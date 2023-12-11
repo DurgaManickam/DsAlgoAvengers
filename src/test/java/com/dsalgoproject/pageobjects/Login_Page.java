@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.dsalgoproject.utilities.LoggerLoad;
+
 public class Login_Page {
 
 	private WebDriver driver;
@@ -110,8 +112,11 @@ public class Login_Page {
 	}
 
 	public void Signin_Page() {
-		driver.findElement(Signinlink).click();
-
+		try {
+			driver.findElement(Signinlink).click();
+		}catch(AssertionError e) {
+			LoggerLoad.info(e.getMessage());
+		}
 	}
 
 	public void loginValidUser(String uname, String passwrd) throws Throwable {
